@@ -8,7 +8,7 @@ int count = 0;
 PFont font;
 
 void setup() {
-  img1 = loadImage("view_smoked.jpg");
+  img1 = loadImage("view_smoked1.jpg");
   img2 = loadImage("view.jpg");
   maskImg = createGraphics(img1.width, img1.height);
   maskImg.beginDraw();
