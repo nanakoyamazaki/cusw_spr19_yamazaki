@@ -2,15 +2,13 @@ PImage img1;
 PImage img2;
 PGraphics maskImg;
 int penSize = 30;
-int x= 200;
-int y= 100;
 
 //represent mouse count
 int count = 0;
 PFont font;
 
 void setup() {
-  img1 = loadImage("view3.jpg");
+  img1 = loadImage("view_smoked.jpg");
   img2 = loadImage("view.jpg");
   maskImg = createGraphics(img1.width, img1.height);
   maskImg.beginDraw();
@@ -36,6 +34,7 @@ void draw() {
   }
   //stamp media lab logo 
   if (keyPressed) {
+    if ((key == 'm') || (key == 'M')){
       maskImg.noStroke();
       maskImg.fill(0);           
       maskImg.rect(mouseX,mouseY,40,10);
@@ -44,6 +43,7 @@ void draw() {
       maskImg.rect(mouseX+60, mouseY+40,10,30);
       maskImg.rect(mouseX, mouseY+30,10,40);
       maskImg.rect(mouseX+10, mouseY+60,30,10);
+    }
   }
   
   maskImg.endDraw();
